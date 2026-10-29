@@ -30,6 +30,7 @@ const ALLOWED_ORIGINS = [
   'https://indokar.vercel.app',
   'http://localhost:3000',
   'http://localhost:5173',
+  'https://masmerlin.vercel.app',
 ];
 
 function cors(req, res) {
