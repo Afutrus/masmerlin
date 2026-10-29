@@ -1443,8 +1443,8 @@
             const requiredCoin = Number((__opt && __opt.dataset && __opt.dataset.coin) || selectedCoinRaw || 0);
 
             // CEK SALDO KOIN PEMAIN dulu sebelum lanjut ke layout.
-            // Saldo kurang / ID bukan angka -> berhenti di sini.
-            // API cek gagal/diam -> FAIL-OPEN (tetap lanjut), seperti forwarder.
+            // Saldo kurang / ID tidak ditemukan / ID bukan angka -> berhenti di sini.
+            // Hanya gangguan transport API -> FAIL-OPEN (tetap lanjut), seperti forwarder.
             Swal.fire({
                 title: 'Mengecek Saldo...',
                 text: 'Mengecek saldo koin ID Anda',
@@ -1460,6 +1460,8 @@
                 });
                 const chk = await chkRes.json().catch(function () { return null; });
                 if (chkRes.status === 400) {
+                    blocked = { title: 'ID Tidak Valid', text: 'Error, ID akun anda tidak valid' };
+                } else if (chk && chk.status === 'invalid') {
                     blocked = { title: 'ID Tidak Valid', text: 'Error, ID akun anda tidak valid' };
                 } else if (chk && chk.status === 'ok' && !chk.enough) {
                     blocked = {
