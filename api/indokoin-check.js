@@ -10,7 +10,11 @@
  *
  * Balasan:
  *   200 { success:true, status:'ok', coin, coin_label, nick, enough }
- *   200 { success:true, status:'unknown' }  // API saldo gagal/diam ->
+ *   200 { success:true, status:'invalid' }  // API menjawab tuntas tapi pemain
+ *                                           // TIDAK ditemukan: data null, atau
+ *                                           // data = {En:9014, Msg:'LoadPlayerDataFailed'}
+ *                                           // (terbukti live 2026-10-29). Halaman BLOKIR.
+ *   200 { success:true, status:'unknown' }  // hanya gangguan transport/HTTP ->
  *                                           // halaman FAIL-OPEN (tetap lanjut),
  *                                           // sama seperti forwarder KA.
  *   400 { success:false, error }            // royal_id bukan angka / coin tidak valid
@@ -92,11 +96,19 @@ module.exports = async (req, res) => {
       clearTimeout(t);
     }
     const m = await upstream.json().catch(() => null);
-    if (!m || m.status !== 'success' || !m.data || typeof m.data.Coin === 'undefined') {
-      console.log('[indokoin-check] upstream tidak memberi saldo -> fail-open');
+    if (!upstream.ok || !m) {
+      // Gangguan transport/HTTP (5xx, body bukan JSON) -> tidak tahu -> fail-open.
+      console.log('[indokoin-check] upstream HTTP ' + upstream.status + ' -> fail-open');
       return res.status(200).json({ success: true, status: 'unknown' });
     }
-    const coin = Number(m.data.Coin);
+    // API menjawab tuntas (HTTP 200 + JSON). Pemain ditemukan HANYA bila
+    // data.Coin ada; selain itu (data null / payload En+Msg) = ID tidak
+    // ditemukan -> invalid, BUKAN fail-open.
+    const coinRaw = (m.data && typeof m.data.Coin !== 'undefined') ? m.data.Coin : undefined;
+    if (typeof coinRaw === 'undefined') {
+      return res.status(200).json({ success: true, status: 'invalid' });
+    }
+    const coin = Number(coinRaw);
     if (!isFinite(coin)) {
       console.log('[indokoin-check] Coin bukan angka -> fail-open');
       return res.status(200).json({ success: true, status: 'unknown' });
