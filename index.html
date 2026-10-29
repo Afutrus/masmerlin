@@ -1,0 +1,2076 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="FB6vOzQIFFPkdMiadi4OCvw8fqATEt9p8l39JEve">
+
+    <title>Bongkar Coin</title>
+    <meta name="description" content="Bongkar coin dengan mudah dan cepat. Proses aman dan terpercaya.">
+
+<meta name="robots" content="noindex, nofollow">
+<meta name="googlebot" content="noindex, nofollow">
+<meta name="language" content="id">
+<meta name="geo.region" content="ID">
+<meta name="geo.country" content="Indonesia">
+
+<link rel="canonical" href="https://cuan.indokoinstore.com/bongkar">
+
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cuan.indokoinstore.com/bongkar">
+    <meta property="og:title" content="Bongkar Coin">
+    <meta property="og:description" content="Bongkar coin dengan mudah dan cepat. Proses aman dan terpercaya.">
+            <meta property="og:locale" content="id_ID">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://cuan.indokoinstore.com/bongkar">
+    <meta property="twitter:title" content="Bongkar Coin">
+    <meta property="twitter:description" content="Bongkar coin dengan mudah dan cepat. Proses aman dan terpercaya.">
+    
+
+<!-- Google tag (gtag.js) -->
+<meta name="theme-color" content="#111827">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://cuan.indokoinstore.com/storage/indokoin/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://cuan.indokoinstore.com/storage/indokoin/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://cuan.indokoinstore.com/storage/indokoin/favicon-16x16.png">
+    <link rel="icon" type="image/x-icon" href="https://cuan.indokoinstore.com/storage/indokoin/favicon.ico">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Tom Select for searchable dropdowns -->
+    <link href="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/css/tom-select.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/js/tom-select.complete.min.js"></script>
+
+    <!-- Image compression (runs in web worker, doesn't freeze UI) -->
+    <script src="https://cdn.jsdelivr.net/npm/browser-image-compression@2.0.2/dist/browser-image-compression.js"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+
+        * {
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            color: #334155;
+            min-height: 100vh;
+        }
+
+        /* Elegant Card */
+        .elegant-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+        }
+
+        .elegant-card:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Color Classes */
+        .primary-blue { color: #3b82f6; }
+        .secondary-blue { color: #1e40af; }
+        .accent-blue { color: #60a5fa; }
+        .neutral-text { color: #64748b; }
+        .light-neutral { color: #94a3b8; }
+
+        /* Button Primary */
+        .btn-primary {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            color: white;
+            border-radius: 0.75rem;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .btn-primary:hover:not(:disabled) {
+            background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+            transform: translateY(-1px);
+            box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.3);
+        }
+
+        .btn-primary:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* Button Secondary */
+        .btn-secondary {
+            background: #f1f5f9;
+            color: #475569;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.75rem;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .btn-secondary:hover {
+            background: #e2e8f0;
+            transform: translateY(-1px);
+        }
+
+        /* Input Field */
+        .input-field {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            border-radius: 0.75rem;
+            border: 1px solid #e2e8f0;
+            background: #f8fafc;
+            color: #334155;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .input-field:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+            background: white;
+        }
+
+        .input-field::placeholder {
+            color: #94a3b8;
+        }
+
+        /* Step Indicator */
+        .step-indicator {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .step-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #cbd5e1;
+            transition: all 0.3s ease;
+        }
+
+        .step-dot.active {
+            background: #3b82f6;
+            box-shadow: 0 0 12px rgba(59, 130, 246, 0.5);
+            transform: scale(1.2);
+        }
+
+        .step-dot.completed {
+            background: #22c55e;
+        }
+
+        .step-line {
+            width: 40px;
+            height: 3px;
+            background: #cbd5e1;
+            transition: all 0.3s ease;
+        }
+
+        .step-line.active {
+            background: linear-gradient(90deg, #22c55e, #3b82f6);
+        }
+
+        /* Upload Zone */
+        .upload-zone {
+            border: 2px dashed #cbd5e1;
+            border-radius: 1rem;
+            padding: 2rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: #f8fafc;
+        }
+
+        .upload-zone:hover, .upload-zone.drag-over {
+            border-color: #3b82f6;
+            background: rgba(59, 130, 246, 0.05);
+        }
+
+        .upload-zone.has-image {
+            border-style: solid;
+            border-color: #22c55e;
+            background: rgba(34, 197, 94, 0.05);
+        }
+
+        .image-preview {
+            max-width: 100%;
+            max-height: 200px;
+            border-radius: 0.75rem;
+            object-fit: contain;
+        }
+
+        /* Status Badge */
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            font-size: 0.875rem;
+        }
+
+        .status-pending {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            color: white;
+        }
+
+        .status-processing {
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            color: white;
+        }
+
+        .status-success {
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            color: white;
+        }
+
+        .status-failed {
+            background: linear-gradient(135deg, #ef4444, #dc2626);
+            color: white;
+        }
+
+        /* Instruction Box */
+        .instruction-box {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            border: 1px solid #bfdbfe;
+            border-radius: 1rem;
+            padding: 1.25rem;
+            position: relative;
+        }
+
+        /* Received Amount Box - PROMINENT */
+        .received-amount-box {
+            background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 15px rgba(22, 163, 74, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .received-amount-box::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        /* Send Coin Box - PROMINENT */
+        .send-coin-box {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border: 2px solid #f59e0b;
+            border-radius: 1rem;
+            padding: 1.25rem;
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.2);
+        }
+
+        /* Summary Row */
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .summary-row:last-child {
+            border-bottom: none;
+        }
+
+        /* Animations */
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes pulseRing {
+            0% { transform: scale(0.9); opacity: 1; }
+            100% { transform: scale(1.5); opacity: 0; }
+        }
+
+        .animate-slide-up {
+            animation: slideUp 0.4s ease-out forwards;
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.3s ease-out forwards;
+        }
+
+        .pulse-ring {
+            animation: pulseRing 1.5s ease-out infinite;
+        }
+
+        /* Watermark */
+        .watermark {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 1;
+            pointer-events: none;
+            overflow: hidden;
+            opacity: 0.03;
+        }
+
+        .watermark-text {
+            position: absolute;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: #1e40af;
+            white-space: nowrap;
+            transform: rotate(-30deg);
+            user-select: none;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #94a3b8, #64748b);
+            border-radius: 4px;
+        }
+
+        .hidden { display: none !important; }
+
+        /* Copy Tooltip */
+        .copy-tooltip {
+            position: absolute;
+            bottom: calc(100% + 8px);
+            left: 50%;
+            transform: translateX(-50%) scale(0.9);
+            background: #1e293b;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 500;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.2s ease;
+            pointer-events: none;
+            z-index: 50;
+        }
+
+        .copy-tooltip::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 5px solid transparent;
+            border-top-color: #1e293b;
+        }
+
+        .copy-tooltip.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) scale(1);
+        }
+
+        /* Tom Select Custom Styles */
+        .ts-wrapper {
+            width: 100%;
+        }
+
+        .ts-wrapper .ts-control {
+            padding: 0.875rem 1rem;
+            border-radius: 0.75rem;
+            border: 1px solid #e2e8f0;
+            background: #f8fafc;
+            color: #334155;
+            font-size: 1rem;
+            box-shadow: none;
+            min-height: auto;
+        }
+
+        .ts-wrapper .ts-control:hover {
+            border-color: #e2e8f0;
+        }
+
+        .ts-wrapper.focus .ts-control {
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+            background: white;
+        }
+
+        .ts-wrapper .ts-control > input {
+            color: #334155;
+        }
+
+        .ts-wrapper .ts-control > input::placeholder {
+            color: #94a3b8;
+        }
+
+        .ts-dropdown {
+            border: 1px solid #e2e8f0;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            margin-top: 0.25rem;
+            overflow: hidden;
+        }
+
+        .ts-dropdown .option {
+            padding: 0.75rem 1rem;
+            color: #334155;
+            cursor: pointer;
+        }
+
+        .ts-dropdown .option:hover,
+        .ts-dropdown .option.active {
+            background: #eff6ff;
+            color: #1e40af;
+        }
+
+        .ts-dropdown .option.selected {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+
+        .ts-dropdown .no-results {
+            padding: 0.75rem 1rem;
+            color: #94a3b8;
+            text-align: center;
+        }
+
+        .ts-wrapper.single .ts-control::after {
+            border-color: #64748b transparent transparent transparent;
+            margin-top: -2px;
+        }
+
+        /* Fee Breakdown Card */
+        .fee-breakdown-card {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            border: 1px solid #e2e8f0;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+
+        .fee-breakdown-header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 0.75rem 1rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .fee-breakdown-header i {
+            font-size: 0.875rem;
+            opacity: 0.9;
+        }
+
+        .fee-breakdown-content {
+            padding: 1rem;
+        }
+
+        .fee-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.625rem 0;
+        }
+
+        .fee-row:first-child {
+            padding-top: 0;
+        }
+
+        .fee-label {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+            color: #64748b;
+        }
+
+        .fee-label i {
+            width: 1rem;
+            text-align: center;
+        }
+
+        .fee-value {
+            font-weight: 600;
+            font-size: 0.875rem;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .fee-deduction .fee-value::before {
+            content: '- ';
+        }
+
+        .fee-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #cbd5e1, transparent);
+            margin: 0.5rem 0;
+        }
+
+        .fee-total {
+            padding-bottom: 0;
+        }
+
+        .fee-total .fee-label {
+            color: #1e40af;
+            font-weight: 600;
+        }
+
+        .fee-final {
+            font-size: 1.125rem;
+            color: #059669;
+            font-weight: 700;
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            .elegant-card {
+                padding: 1.25rem;
+            }
+
+            .fee-breakdown-card {
+                margin-top: 1rem;
+            }
+        }
+
+        /* Settings-driven bongkar announcement popup (shared partial: storefront/partials/bongkar-announcement) */
+        .ka-announce-overlay { position: fixed; inset: 0; z-index: 9999; background: rgba(0,0,0,0.6); backdrop-filter: blur(4px); display: flex; align-items: center; justify-content: center; padding: 1rem; }
+        .ka-announce-modal { max-width: 500px; width: 100%; background: #ffffff; border-radius: 1rem; overflow: hidden; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); animation: kaSlideIn 0.3s ease-out; }
+        @keyframes kaSlideIn { from { opacity: 0; transform: scale(0.95) translateY(-12px); } to { opacity: 1; transform: scale(1) translateY(0); } }
+        .ka-announce-header { padding: 1rem 1.5rem; color: #fff; position: relative; background: linear-gradient(135deg, #1f2937, #111827); }
+        .ka-announce-close { position: absolute; top: 0.5rem; right: 0.5rem; background: none; border: none; cursor: pointer; color: #fff; font-size: 1.25rem; line-height: 1; font-weight: 700; width: 2rem; height: 2rem; display: flex; align-items: center; justify-content: center; border-radius: 50%; transition: transform 0.3s ease, background 0.2s; }
+        .ka-announce-close:hover { transform: rotate(90deg); background: rgba(255,255,255,0.2); }
+        .ka-announce-title { font-size: 1rem; font-weight: 700; text-align: center; padding: 0 2rem; margin: 0; }
+        .ka-announce-body { padding: 1rem 1.5rem; }
+        .ka-announce-content-box { background-color: #f9fafb; border: 1px solid #e5e7eb; border-radius: 0.5rem; padding: 0.75rem 1rem; margin-bottom: 1rem; }
+        .ka-announce-text { color: #374151; font-size: 0.875rem; line-height: 1.625; }
+        .ka-announce-btn { width: 100%; padding: 0.625rem 1rem; border-radius: 0.5rem; font-size: 0.875rem; font-weight: 700; color: #fff; border: none; cursor: pointer; background: linear-gradient(135deg, #1f2937, #111827); transition: opacity 0.2s; }
+        .ka-announce-btn:hover { opacity: 0.9; }
+        .royal-notice { background-color: #f9fafb; border: 1px solid #e5e7eb; border-radius: 1.25rem; padding: 0.75rem 1rem; }
+        .royal-notice-label { color: #1f2937; font-size: 1.125rem; font-weight: 700; letter-spacing: -0.02em; text-align: center; margin-bottom: 0.5rem; }
+        .royal-notice-text { color: #374151; font-size: 0.875rem; line-height: 1.625; text-align: center; margin: 0; }
+        .royal-notice-amount { color: #b8860b; font-weight: 700; }
+            </style>
+    </head>
+
+<body class="min-h-screen">
+    
+    
+    <!-- Announcement Modal (settings-driven; configured in "Konfigurasi Website" → "Pengaturan Konten" → "Pengumuman / Popup") -->
+    
+    <!-- Watermark -->
+    <div class="watermark">
+        <div id="watermarkContainer"></div>
+    </div>
+
+    <div class="relative z-10 max-w-lg mx-auto px-4 py-8">
+        <!-- Header -->
+        <header class="text-center mb-8 animate-fade-in">
+            <div class="mb-4">
+                <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 shadow-lg">
+                    <i class="fas fa-coins text-white text-2xl"></i>
+                </div>
+            </div>
+            <h1 class="text-3xl font-bold secondary-blue mb-2">Bongkar Coin</h1>
+            <p class="neutral-text text-sm">Tukar coin Anda menjadi uang tunai</p>
+        </header>
+
+        
+        <!-- Step Indicator -->
+        <div class="step-indicator mb-8">
+            <div class="step-dot active" id="step1Dot"></div>
+            <div class="step-line" id="line1"></div>
+            <div class="step-dot" id="step2Dot"></div>
+            <div class="step-line" id="line2"></div>
+            <div class="step-dot" id="step3Dot"></div>
+        </div>
+
+        <!-- Step 1: Form -->
+        <section id="step1" class="animate-slide-up">
+            <div class="elegant-card rounded-2xl p-6">
+                <h2 class="text-xl font-bold secondary-blue text-center mb-6">
+                    <i class="fas fa-edit mr-2 accent-blue"></i>
+                    Masukkan Data Bongkar
+                </h2>
+
+                <form id="bongkarForm" class="space-y-5">
+                    <!-- Product Selection -->
+                    <div>
+                        <label class="block text-sm font-semibold secondary-blue mb-2">
+                            <i class="fas fa-box mr-2 accent-blue"></i>
+                            Pilih Produk
+                        </label>
+                        <select id="productId" name="product_id" required>
+                            <option value="">-- Pilih Jumlah Coin --</option>
+                                                                                            <option value="bp-01m2ctw8vcm1wjnz950yw5xxfw"
+                                    data-coin="1000000000"
+                                    data-amount="62000"
+                                    data-nett_amount="62000"
+                                    data-total_fee="0"
+                                    data-coin-abbreviated="1B Coin">
+                                    1B Coin → Terima Rp 62.000
+                                </option>
+                                                                                            <option value="bp-01m2ctx18mkfa1gtbc3dmrwzj6"
+                                    data-coin="2000000000"
+                                    data-amount="124000"
+                                    data-nett_amount="124000"
+                                    data-total_fee="0"
+                                    data-coin-abbreviated="2B Coin">
+                                    2B Coin → Terima Rp 124.000
+                                </option>
+                                                                                            <option value="bp-01m2ctxsq2e6jp4frj7ebrbyg5"
+                                    data-coin="3000000000"
+                                    data-amount="186000"
+                                    data-nett_amount="186000"
+                                    data-total_fee="0"
+                                    data-coin-abbreviated="3B Coin">
+                                    3B Coin → Terima Rp 186.000
+                                </option>
+                                                                                            <option value="bp-01m2ctyj303dx2p1pxfw6fkk61"
+                                    data-coin="4000000000"
+                                    data-amount="248000"
+                                    data-nett_amount="248000"
+                                    data-total_fee="0"
+                                    data-coin-abbreviated="4B Coin">
+                                    4B Coin → Terima Rp 248.000
+                                </option>
+                                                                                            <option value="bp-01m2ctzn7ncbrapp1kc1e2wyje"
+                                    data-coin="5000000000"
+                                    data-amount="310000"
+                                    data-nett_amount="310000"
+                                    data-total_fee="0"
+                                    data-coin-abbreviated="5B Coin">
+                                    5B Coin → Terima Rp 310.000
+                                </option>
+                                                                                            <option value="bp-01m2cv0dkcyecpxypbs0fx01tp"
+                                    data-coin="6000000000"
+                                    data-amount="372000"
+                                    data-nett_amount="372000"
+                                    data-total_fee="0"
+                                    data-coin-abbreviated="6B Coin">
+                                    6B Coin → Terima Rp 372.000
+                                </option>
+                                                                                            <option value="bp-01m2cv15xdcjzbz73wc9c27bge"
+                                    data-coin="7000000000"
+                                    data-amount="434000"
+                                    data-nett_amount="434000"
+                                    data-total_fee="0"
+                                    data-coin-abbreviated="7B Coin">
+                                    7B Coin → Terima Rp 434.000
+                                </option>
+                                                                                            <option value="bp-01m2cv1y6kae6hkt4g7rynz4fy"
+                                    data-coin="8000000000"
+                                    data-amount="496000"
+                                    data-nett_amount="496000"
+                                    data-total_fee="0"
+                                    data-coin-abbreviated="8B Coin">
+                                    8B Coin → Terima Rp 496.000
+                                </option>
+                                                                                            <option value="bp-01m2cv32efbrajeb4j98fgwene"
+                                    data-coin="9000000000"
+                                    data-amount="558000"
+                                    data-nett_amount="558000"
+                                    data-total_fee="0"
+                                    data-coin-abbreviated="9B Coin">
+                                    9B Coin → Terima Rp 558.000
+                                </option>
+                                                                                            <option value="bp-01m2cv3txyexc8rvv2ac0r2jz7"
+                                    data-coin="10000000000"
+                                    data-amount="620000"
+                                    data-nett_amount="620000"
+                                    data-total_fee="0"
+                                    data-coin-abbreviated="10B Coin">
+                                    10B Coin → Terima Rp 620.000
+                                </option>
+                                                                                            <option value="bp-01m2cv4k52gw2m9stzj8k8fefd"
+                                    data-coin="20000000000"
+                                    data-amount="1240000"
+                                    data-nett_amount="1240000"
+                                    data-total_fee="0"
+                                    data-coin-abbreviated="20B Coin">
+                                    20B Coin → Terima Rp 1.240.000
+                                </option>
+                                                    </select>
+
+                        <!-- Fee Breakdown - appears after product selection -->
+                        <div id="feeBreakdown" class="hidden mt-4 animate-fade-in">
+                            <div class="fee-breakdown-card">
+                                <div class="fee-breakdown-header">
+                                    <i class="fas fa-calculator"></i>
+                                    <span>Rincian Biaya</span>
+                                </div>
+                                <div class="fee-breakdown-content">
+                                    <!-- Product Amount -->
+                                    <div class="fee-row">
+                                        <span class="fee-label">
+                                            <i class="fas fa-coins text-blue-400"></i>
+                                            Nilai Coin
+                                        </span>
+                                        <span class="fee-value text-slate-700" id="feeProductAmount">-</span>
+                                    </div>
+
+                                    <!-- Total Fee -->
+                                    <div class="fee-row fee-deduction">
+                                        <span class="fee-label">
+                                            <i class="fas fa-minus-circle text-red-400"></i>
+                                            Biaya Admin
+                                        </span>
+                                        <span class="fee-value text-red-500" id="feeTotalFee">-</span>
+                                    </div>
+
+                                    <!-- Divider -->
+                                    <div class="fee-divider"></div>
+
+                                    <!-- Net Amount -->
+                                    <div class="fee-row fee-total">
+                                        <span class="fee-label">
+                                            <i class="fas fa-wallet text-emerald-500"></i>
+                                            Anda Terima
+                                        </span>
+                                        <span class="fee-value fee-final" id="feeNetAmount">-</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ID Pemain -->
+                    <div>
+                        <label class="block text-sm font-semibold secondary-blue mb-2">
+                            <i class="fas fa-user mr-2 accent-blue"></i>
+                            ID Pemain Anda
+                        </label>
+                        <input type="text" id="royalId" name="royal_id" class="input-field" placeholder="Masukkan ID Pemain Anda" required minlength="4" maxlength="20">
+                    </div>
+
+                    <!-- Phone Number -->
+                    <div>
+                        <label class="block text-sm font-semibold secondary-blue mb-2">
+                            <i class="fas fa-phone mr-2 accent-blue"></i>
+                            Nomor Telepon
+                        </label>
+                        <input type="tel" id="phoneNumber" name="phone_number" class="input-field" placeholder="Contoh: 081234567890" required minlength="9" maxlength="20" pattern="[0-9]+">
+                    </div>
+
+                    <!-- Bank Selection -->
+                    <div>
+                        <label class="block text-sm font-semibold secondary-blue mb-2">
+                            <i class="fas fa-university mr-2 accent-blue"></i>
+                            Bank Tujuan
+                        </label>
+                        <select id="bankCode" name="bank_code" required>
+                            <option value="">-- Pilih Bank --</option>
+                                                            <option value="002">Bank Rakyat Indonesia (BRI)</option>
+                                                            <option value="009">Bank Negara Indonesia (BNI)</option>
+                                                            <option value="011">Bank Danamon</option>
+                                                            <option value="013">Bank Permata</option>
+                                                            <option value="014">Bank Central Asia (BCA)</option>
+                                                            <option value="016">Maybank Indonesia</option>
+                                                            <option value="019">Bank Panin</option>
+                                                            <option value="020">Bank Arta Niaga Kencana</option>
+                                                            <option value="022">CIMB Niaga</option>
+                                                            <option value="023">Bank UOB</option>
+                                                            <option value="028">Bank OCBC NISP</option>
+                                                            <option value="030">American Express Bank LTD</option>
+                                                            <option value="031">Citibank</option>
+                                                            <option value="032">JP Morgan Chase Indonesia</option>
+                                                            <option value="033">Bank of America NA</option>
+                                                            <option value="034">ING Indonesia Bank</option>
+                                                            <option value="036">Bank China Construction Bank Indonesia</option>
+                                                            <option value="037">Bank Artha Graha Internasional</option>
+                                                            <option value="039">Bank Credit Agricole Indosuez</option>
+                                                            <option value="040">Bangkok Bank</option>
+                                                            <option value="041">HSBC Indonesia</option>
+                                                            <option value="042">Bank of Tokyo Mitsubishi UFJ</option>
+                                                            <option value="045">Bank Sumitomo Mitsui Indonesia</option>
+                                                            <option value="046">DBS Indonesia</option>
+                                                            <option value="047">Bank Resona Perdania</option>
+                                                            <option value="048">Bank Mizuho Indonesia</option>
+                                                            <option value="050">Standard Chartered Bank</option>
+                                                            <option value="052">Bank ABN Amro</option>
+                                                            <option value="053">Bank Keppel Tatlee Buana</option>
+                                                            <option value="054">Bank Capital Indonesia</option>
+                                                            <option value="057">BNP Paribas Indonesia</option>
+                                                            <option value="059">Korea Exchange Bank Danamon</option>
+                                                            <option value="060">Rabobank International Indonesia</option>
+                                                            <option value="061">ANZ Indonesia</option>
+                                                            <option value="067">Deutsche Bank AG.</option>
+                                                            <option value="069">Bank of China (Hong Kong) Limited</option>
+                                                            <option value="076">Bank Bumi Arta</option>
+                                                            <option value="088">Bank Antardaerah</option>
+                                                            <option value="095">Bank Mutiara (Jtrust)</option>
+                                                            <option value="097">Bank Mayapada</option>
+                                                            <option value="110">BJB</option>
+                                                            <option value="111">Bank DKI</option>
+                                                            <option value="112">Bank BPD DIY</option>
+                                                            <option value="113">Bank Jateng</option>
+                                                            <option value="114">Bank Jatim</option>
+                                                            <option value="115">Bank Jambi</option>
+                                                            <option value="116">Bank Aceh</option>
+                                                            <option value="117">Bank Sumut</option>
+                                                            <option value="118">Bank Sumbar</option>
+                                                            <option value="119">Bank Riau Kepri</option>
+                                                            <option value="120">Bank Sumsel Babel</option>
+                                                            <option value="121">Bank Lampung</option>
+                                                            <option value="122">Bank Kalsel</option>
+                                                            <option value="123">Bank Kalbar</option>
+                                                            <option value="124">Bank Kaltim</option>
+                                                            <option value="125">Bank Kalteng</option>
+                                                            <option value="126">Bank Sulselbar</option>
+                                                            <option value="127">Bank SulutGo</option>
+                                                            <option value="128">Bank NTB Syariah</option>
+                                                            <option value="129">BPD Bali</option>
+                                                            <option value="130">Bank NTT</option>
+                                                            <option value="131">Bank Maluku</option>
+                                                            <option value="132">Bank Papua</option>
+                                                            <option value="133">Bank Bengkulu</option>
+                                                            <option value="134">Bank Sulteng (Sulawesi Tengah)</option>
+                                                            <option value="135">Bank Sultra</option>
+                                                            <option value="137">BPD Banten</option>
+                                                            <option value="145">Bank Nusantara Parahyangan</option>
+                                                            <option value="146">Bank of India Indonesia</option>
+                                                            <option value="147">Muamalat</option>
+                                                            <option value="151">Bank Mestika Dharma</option>
+                                                            <option value="152">Bank Shinhan Indonesia</option>
+                                                            <option value="153">Bank Sinarmas</option>
+                                                            <option value="157">Bank Maspion Indonesia</option>
+                                                            <option value="161">Bank Ganesha</option>
+                                                            <option value="164">ICBC Indonesia</option>
+                                                            <option value="166">Bank Harmoni International</option>
+                                                            <option value="167">QNB Indonesia</option>
+                                                            <option value="200">BTN</option>
+                                                            <option value="212">Bank Woori Saudara (HS 1906)</option>
+                                                            <option value="213">BTPN</option>
+                                                            <option value="405">Bank Victoria Syariah</option>
+                                                            <option value="425">BJB Syariah</option>
+                                                            <option value="426">Bank Mega</option>
+                                                            <option value="441">Bank Bukopin</option>
+                                                            <option value="451">BSI (Bank Syariah Indonesia)</option>
+                                                            <option value="459">Bisnis Internasional</option>
+                                                            <option value="466">Bank Sri Partha</option>
+                                                            <option value="472">Bank Jasa Jakarta</option>
+                                                            <option value="484">LINE Bank</option>
+                                                            <option value="485">Motion</option>
+                                                            <option value="490">Neo Commerce</option>
+                                                            <option value="494">BRI Agroniaga</option>
+                                                            <option value="498">SBI Indonesia</option>
+                                                            <option value="501">Blu</option>
+                                                            <option value="503">Nobu (Nationalnobu) Bank</option>
+                                                            <option value="506">Bank Mega Syariah</option>
+                                                            <option value="513">Bank Ina Perdana</option>
+                                                            <option value="517">Panin Dubai Syariah</option>
+                                                            <option value="520">Bank Prima Master</option>
+                                                            <option value="521">Bank Bukopin Syariah</option>
+                                                            <option value="523">Bank Sahabat Sampoerna</option>
+                                                            <option value="525">Bank Akita</option>
+                                                            <option value="526">Bank Dinar Indonesia</option>
+                                                            <option value="531">Bank Amar Indonesia</option>
+                                                            <option value="535">Seabank</option>
+                                                            <option value="536">BCA (Bank Central Asia) Syariah</option>
+                                                            <option value="542">Bank Jago</option>
+                                                            <option value="547">Bank BTPN Syariah</option>
+                                                            <option value="548">Bank Multi Arta Sentosa</option>
+                                                            <option value="553">Bank Mayora Indonesia</option>
+                                                            <option value="555">Bank Index Selindo</option>
+                                                            <option value="559">Bank CNB (Centratama Nasional Bank)</option>
+                                                            <option value="562">Bank Fama Internasional</option>
+                                                            <option value="564">Bank MANTAP (Mandiri Taspen)</option>
+                                                            <option value="566">Bank Victoria International</option>
+                                                            <option value="567">Allo Bank</option>
+                                                            <option value="688">BPR KS</option>
+                                                            <option value="722">Bank Danamon Syariah</option>
+                                                            <option value="724">Bank DKI Syariah</option>
+                                                            <option value="725">Bank Jateng Syariah</option>
+                                                            <option value="734">Bank Sinarmas Syariah</option>
+                                                            <option value="867">BPR EKA (Bank Eka)</option>
+                                                            <option value="945">Bank IBK Indonesia</option>
+                                                            <option value="947">Bank Aladin Syariah</option>
+                                                            <option value="949">CTBC (Chinatrust) Indonesia</option>
+                                                            <option value="950">Commonwealth Bank</option>
+                                                            <option value="987">Artajasa Pembayaran Elektronik</option>
+                                                            <option value="dana">Dana</option>
+                                                            <option value="gopay">GoPay</option>
+                                                            <option value="linkaja">LinkAja</option>
+                                                            <option value="ovo">OVO</option>
+                                                            <option value="shopeepay">ShopeePay</option>
+                                                    </select>
+                    </div>
+
+                    <!-- Account Number -->
+                    <div>
+                        <label class="block text-sm font-semibold secondary-blue mb-2">
+                            <i class="fas fa-credit-card mr-2 accent-blue"></i>
+                            Nomor Rekening
+                        </label>
+                        <input type="text" id="accountNumber" name="account_number" class="input-field" placeholder="Masukkan nomor rekening" required minlength="8" maxlength="30" pattern="[0-9]+">
+                    </div>
+
+                    <!-- Account Name -->
+                    <div>
+                        <label class="block text-sm font-semibold secondary-blue mb-2">
+                            <i class="fas fa-id-card mr-2 accent-blue"></i>
+                            Nama Pemilik Rekening
+                        </label>
+                        <input type="text" id="accountName" name="account_name" class="input-field" placeholder="Nama sesuai rekening bank" required minlength="3" maxlength="100">
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" id="submitBtn" class="w-full py-4 btn-primary text-lg mt-6">
+                        <i class="fas fa-arrow-right mr-2"></i>
+                        Lanjutkan
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Step 2: Summary & Upload -->
+        <section id="step2" class="hidden animate-slide-up">
+            <div class="elegant-card rounded-2xl p-6">
+                <h2 class="text-xl font-bold secondary-blue text-center mb-6">
+                    <i class="fas fa-file-alt mr-2 accent-blue"></i>
+                    Ringkasan Bongkar
+                </h2>
+
+                <!-- PROMINENT: Amount User Will Receive -->
+                <div class="received-amount-box mb-6">
+                    <div class="text-center">
+                        <p class="text-white/90 text-sm font-medium mb-1">ANDA AKAN MENERIMA</p>
+                        <p class="text-white text-3xl font-bold" id="summaryNettAmount">-</p>
+                    </div>
+                </div>
+
+                <!-- Fee Breakdown Card -->
+                <div class="fee-breakdown-card mb-6">
+                    <div class="fee-breakdown-header">
+                        <i class="fas fa-calculator"></i>
+                        <span>Rincian Biaya</span>
+                    </div>
+                    <div class="fee-breakdown-content">
+                        <!-- Coin Amount -->
+                        <div class="fee-row">
+                            <span class="fee-label">
+                                <i class="fas fa-coins text-blue-400"></i>
+                                Jumlah Coin
+                            </span>
+                            <span class="fee-value text-slate-700" id="summaryCoin">-</span>
+                        </div>
+
+                        <!-- Product Amount -->
+                        <div class="fee-row">
+                            <span class="fee-label">
+                                <i class="fas fa-money-bill-wave text-blue-400"></i>
+                                Nilai Coin
+                            </span>
+                            <span class="fee-value text-slate-700" id="summaryProductAmount">-</span>
+                        </div>
+
+                        <!-- Total Fee -->
+                        <div class="fee-row fee-deduction">
+                            <span class="fee-label">
+                                <i class="fas fa-minus-circle text-red-400"></i>
+                                Biaya Admin
+                            </span>
+                            <span class="fee-value text-red-500" id="summaryTotalFee">-</span>
+                        </div>
+
+                        <!-- Divider -->
+                        <div class="fee-divider"></div>
+
+                        <!-- Net Amount -->
+                        <div class="fee-row fee-total">
+                            <span class="fee-label">
+                                <i class="fas fa-wallet text-emerald-500"></i>
+                                Anda Terima
+                            </span>
+                            <span class="fee-value fee-final" id="summaryAmount">-</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bank Details Card -->
+                <div class="bg-slate-50 rounded-xl p-4 mb-6 border border-slate-200">
+                    <h3 class="secondary-blue font-semibold mb-3 flex items-center gap-2">
+                        <i class="fas fa-university accent-blue"></i>
+                        Rekening Tujuan
+                    </h3>
+                    <div class="space-y-1 text-sm">
+                        <div class="summary-row">
+                            <span class="neutral-text">Bank</span>
+                            <span class="secondary-blue font-semibold" id="summaryBank">-</span>
+                        </div>
+                        <div class="summary-row">
+                            <span class="neutral-text">No. Rekening</span>
+                            <span class="secondary-blue font-mono font-semibold" id="summaryAccount">-</span>
+                        </div>
+                        <div class="summary-row">
+                            <span class="neutral-text">Atas Nama</span>
+                            <span class="secondary-blue font-semibold" id="summaryName">-</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coin Amount to Send - VERY PROMINENT -->
+                <div class="send-coin-box mb-4">
+                    <div class="text-center">
+                        <p class="text-amber-900 text-sm font-medium mb-1">KIRIM COIN SEBANYAK</p>
+                        <p class="text-amber-900 text-3xl font-bold" id="sendCoinAmount">-</p>
+                    </div>
+                </div>
+
+                <!-- Instruction Box -->
+                <div class="instruction-box mb-6">
+                    <div class="flex items-start gap-3">
+                        <div class="flex-shrink-0">
+                            <div class="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center">
+                                <i class="fas fa-paper-plane text-white"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="secondary-blue font-semibold mb-2">Kirim ke Akun Ini</h4>
+                            <div class="space-y-2">
+                                <div class="flex items-center gap-2">
+                                    <span class="neutral-text text-sm">ID Pemain:</span>
+                                    <span id="royalIdValue" class="font-bold primary-blue text-lg">10101010</span>
+                                    <button type="button" id="copyRoyalId" class="relative flex-shrink-0 p-1.5 rounded-md bg-blue-100 hover:bg-blue-200 text-blue-600 transition-all duration-200 active:scale-95" title="Salin ID Pemain">
+                                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                                        </svg>
+                                        <span id="copyRoyalIdTooltip" class="copy-tooltip">Tersalin!</span>
+                                    </button>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="neutral-text text-sm">Username:</span>
+                                    <span id="royalUsernameValue" class="font-bold primary-blue text-lg">MERLIN</span>
+                                </div>
+                            </div>
+                            <p class="neutral-text text-xs mt-3">
+                                Setelah kirim coin, klik tombol Konfirmasi di bawah.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="flex gap-3">
+                    <button type="button" id="backToStep1" class="flex-1 py-3 px-4 btn-secondary">
+                        <i class="fas fa-arrow-left mr-2"></i>
+                        Kembali
+                    </button>
+                    <button type="button" id="confirmBtn" class="flex-1 py-3 px-4 btn-primary">
+                        <i class="fas fa-check mr-2"></i>
+                        Konfirmasi
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 3: Status Tracking -->
+        <section id="step3" class="hidden animate-slide-up">
+            <div class="elegant-card rounded-2xl p-6 text-center">
+                <div class="mb-6">
+                    <div class="relative inline-block">
+                        <div class="w-20 h-20 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
+                            <i class="fas fa-paper-plane text-white text-3xl"></i>
+                        </div>
+                        <div class="absolute inset-0 rounded-full border-4 border-blue-400/30 pulse-ring"></div>
+                    </div>
+                </div>
+
+                <h2 class="text-xl font-bold secondary-blue mb-2">Permintaan Terkirim!</h2>
+                <p class="neutral-text text-sm mb-6">Permintaan bongkar Anda sedang diproses oleh admin</p>
+
+                <!-- Status Badge -->
+                <div class="mb-6">
+                    <span id="statusBadge" class="status-badge status-pending">
+                        <svg id="statusIcon" class="w-4 h-4 animate-spin" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" fill="none"></circle>
+                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        <span id="statusText">Menunggu</span>
+                    </span>
+                </div>
+
+                <!-- Cooldown -->
+                <div class="bg-slate-50 rounded-xl p-4 mb-6 border border-slate-200">
+                    <p class="light-neutral text-xs mb-2">Cooldown ID Ini</p>
+                    <p class="primary-blue font-mono text-lg font-semibold" id="cooldownDisplay">05:00</p>
+                    <p class="light-neutral text-xs mt-1">ID yang sama bisa bongkar lagi setelah hitungan selesai.</p>
+                </div>
+
+                                    <!-- Info Text -->
+                    <p class="light-neutral text-xs mb-6">
+                        <i class="fas fa-paper-plane mr-1"></i>
+                        Notifikasi sudah dikirim ke admin via Telegram.
+                    </p>
+                
+                <!-- New Request Button -->
+                <button type="button" id="newRequestBtn" class="w-full py-3 btn-primary">
+                    <i class="fas fa-plus mr-2"></i>
+                    Buat Permintaan Baru
+                </button>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // ===== BONGKAR POLOS: TANPA ORDER KE SERVER =====
+        // Alur: isi form (step 1) -> cek saldo koin pemain -> layout ringkasan
+        // (step 2) -> Konfirmasi hanya mengirim notifikasi Telegram lewat
+        // /api/indokoin-notify. Cek saldo yang gagal/diam = FAIL-OPEN.
+        // TIDAK ada inquiry/order ke supplier dan TIDAK ada polling status.
+        // Setelah 1x bongkar berhasil terkirim, ID yang sama kena cooldown
+        // 5 menit (disimpan per ID di localStorage browser ini).
+        const API_NOTIFY = "/api/indokoin-notify";  // POST notifikasi Telegram
+        const API_CHECK = "/api/indokoin-check";    // POST cek saldo koin pemain
+        const COOLDOWN_MS = 5 * 60 * 1000;          // 5 menit
+        const CD_PREFIX = 'bongkar_cd_';
+
+        // State
+        let lastFormData = null;
+        let lastAmountLabel = '';
+        let cdTimer = null;
+
+        // DOM Elements
+        const step1 = document.getElementById('step1');
+        const step2 = document.getElementById('step2');
+        const step3 = document.getElementById('step3');
+        const step1Dot = document.getElementById('step1Dot');
+        const step2Dot = document.getElementById('step2Dot');
+        const step3Dot = document.getElementById('step3Dot');
+        const line1 = document.getElementById('line1');
+        const line2 = document.getElementById('line2');
+        const bongkarForm = document.getElementById('bongkarForm');
+        const backToStep1 = document.getElementById('backToStep1');
+        const confirmBtn = document.getElementById('confirmBtn');
+        const newRequestBtn = document.getElementById('newRequestBtn');
+
+        // Initialize Tom Select for searchable dropdowns
+        let productSelect, bankSelect;
+        let selectedCoinAbbreviated = null;
+        let selectedCoinRaw = null;
+        let selectedProductAmount = null;
+        let selectedTotalFee = null;
+        let selectedNettAmount = null;
+
+        function initializeSearchableDropdowns() {
+            // Product dropdown
+            productSelect = new TomSelect('#productId', {
+                placeholder: 'Cari atau pilih jumlah coin...',
+                allowEmptyOption: true,
+                create: false,
+                sortField: [],
+                render: {
+                    option: function(data, escape) {
+                        return '<div class="option">' + escape(data.text) + '</div>';
+                    },
+                    item: function(data, escape) {
+                        return '<div>' + escape(data.text) + '</div>';
+                    },
+                    no_results: function() {
+                        return '<div class="no-results">Tidak ada hasil ditemukan</div>';
+                    }
+                },
+                onChange: function(value) {
+                    const feeBreakdown = document.getElementById('feeBreakdown');
+
+                    if (value) {
+                        const selectEl = document.getElementById('productId');
+                        const option = selectEl?.querySelector(`option[value="${value}"]`);
+                        selectedCoinAbbreviated = option?.dataset.coinAbbreviated || null;
+                        selectedCoinRaw = option?.dataset.coin || null;
+
+                        // Get fee data from option and store globally
+                        const amount = parseFloat(option?.dataset.amount || 0);
+                        const totalFee = parseFloat(option?.dataset.total_fee || 0);
+                        const nettAmount = parseFloat(option?.dataset.nett_amount || 0);
+
+                        // Store for use in Step 2 summary
+                        selectedProductAmount = amount;
+                        selectedTotalFee = totalFee;
+                        selectedNettAmount = nettAmount;
+
+                        // Update fee breakdown display
+                        document.getElementById('feeProductAmount').textContent = formatCurrency(amount);
+                        document.getElementById('feeTotalFee').textContent = formatCurrency(totalFee);
+                        document.getElementById('feeNetAmount').textContent = formatCurrency(nettAmount);
+
+                        // Show fee breakdown with animation
+                        feeBreakdown.classList.remove('hidden');
+                    } else {
+                        selectedCoinAbbreviated = null;
+                        selectedCoinRaw = null;
+                        selectedProductAmount = null;
+                        selectedTotalFee = null;
+                        selectedNettAmount = null;
+                        // Hide fee breakdown
+                        feeBreakdown.classList.add('hidden');
+                    }
+                }
+            });
+
+            // Bank dropdown
+            bankSelect = new TomSelect('#bankCode', {
+                placeholder: 'Cari atau pilih bank...',
+                allowEmptyOption: true,
+                create: false,
+                sortField: {
+                    field: 'text',
+                    direction: 'asc'
+                },
+                render: {
+                    option: function(data, escape) {
+                        return '<div class="option">' + escape(data.text) + '</div>';
+                    },
+                    item: function(data, escape) {
+                        return '<div>' + escape(data.text) + '</div>';
+                    },
+                    no_results: function() {
+                        return '<div class="no-results">Bank tidak ditemukan</div>';
+                    }
+                }
+            });
+        }
+
+        // Initialize dropdowns on page load
+        initializeSearchableDropdowns();
+
+        // Helper Functions
+        function bankNameLabel(code) {
+            const sel = document.getElementById('bankCode');
+            if (!sel || !code) return code || '';
+            const opt = sel.querySelector('option[value="' + code + '"]');
+            return opt ? opt.textContent.trim() : code;
+        }
+
+        function formatCurrency(amount) {
+            return 'Rp ' + parseFloat(amount).toLocaleString('id-ID', {
+                minimumFractionDigits: 0,
+                maximumFractionDigits: 0
+            });
+        }
+
+        function fmtMs(ms) {
+            const s = Math.max(0, Math.ceil(ms / 1000));
+            return String(Math.floor(s / 60)).padStart(2, '0') + ':' + String(s % 60).padStart(2, '0');
+        }
+
+        function showStep(step) {
+            step1.classList.add('hidden');
+            step2.classList.add('hidden');
+            step3.classList.add('hidden');
+
+            step1Dot.classList.remove('active', 'completed');
+            step2Dot.classList.remove('active', 'completed');
+            step3Dot.classList.remove('active', 'completed');
+            line1.classList.remove('active');
+            line2.classList.remove('active');
+
+            if (step >= 1) {
+                step1.classList.remove('hidden');
+                step1Dot.classList.add('active');
+            }
+            if (step >= 2) {
+                step1.classList.add('hidden');
+                step2.classList.remove('hidden');
+                step1Dot.classList.remove('active');
+                step1Dot.classList.add('completed');
+                step2Dot.classList.add('active');
+                line1.classList.add('active');
+            }
+            if (step >= 3) {
+                step2.classList.add('hidden');
+                step3.classList.remove('hidden');
+                step2Dot.classList.remove('active');
+                step2Dot.classList.add('completed');
+                step3Dot.classList.add('active');
+                line2.classList.add('active');
+            }
+        }
+
+        // ===== Cooldown per ID (localStorage) =====
+        function cdEndsAt(royalId) {
+            try {
+                return parseInt(localStorage.getItem(CD_PREFIX + royalId) || '0', 10) || 0;
+            } catch (e) { return 0; }
+        }
+
+        function cdRemaining(royalId) {
+            return Math.max(0, cdEndsAt(royalId) - Date.now());
+        }
+
+        function cdSet(royalId) {
+            try {
+                localStorage.setItem(CD_PREFIX + royalId, String(Date.now() + COOLDOWN_MS));
+            } catch (e) {}
+        }
+
+        function cdAlert(royalId) {
+            Swal.fire({
+                icon: 'warning',
+                title: 'Cooldown',
+                text: 'ID ini baru saja bongkar. Coba lagi dalam ' + fmtMs(cdRemaining(royalId)) + '.',
+                confirmButtonColor: "#3b82f6"
+            });
+        }
+
+        function fillSummary(fd) {
+            const coinText = selectedCoinRaw
+                ? Number(selectedCoinRaw).toLocaleString('id-ID')
+                : (selectedCoinAbbreviated || '-');
+            document.getElementById('summaryCoin').textContent = coinText;
+            document.getElementById('summaryAmount').textContent =
+                (selectedNettAmount !== null && selectedNettAmount !== undefined)
+                    ? formatCurrency(selectedNettAmount) : '-';
+            document.getElementById('summaryNettAmount').textContent =
+                document.getElementById('summaryAmount').textContent;
+            document.getElementById('sendCoinAmount').textContent = selectedCoinAbbreviated || coinText;
+            document.getElementById('summaryBank').textContent = bankNameLabel(fd.bank_code) || '-';
+            document.getElementById('summaryAccount').textContent = fd.account_number || '-';
+            document.getElementById('summaryName').textContent = fd.account_name || '-';
+            if (selectedProductAmount !== null && selectedProductAmount !== undefined) {
+                document.getElementById('summaryProductAmount').textContent = formatCurrency(selectedProductAmount);
+            }
+            if (selectedTotalFee !== null && selectedTotalFee !== undefined) {
+                document.getElementById('summaryTotalFee').textContent = formatCurrency(selectedTotalFee);
+            }
+        }
+
+        function resetToStep1() {
+            lastFormData = null;
+            lastAmountLabel = '';
+            selectedCoinAbbreviated = null;
+            selectedCoinRaw = null;
+            selectedProductAmount = null;
+            selectedTotalFee = null;
+            selectedNettAmount = null;
+            if (cdTimer) { clearInterval(cdTimer); cdTimer = null; }
+            bongkarForm.reset();
+            if (productSelect) productSelect.clear();
+            if (bankSelect) bankSelect.clear();
+            confirmBtn.disabled = false;
+            document.getElementById('feeBreakdown').classList.add('hidden');
+            showStep(1);
+        }
+
+        // Watermark
+        function createWatermark() {
+            const container = document.getElementById('watermarkContainer');
+            if (!container) return;
+            const currentDomain = window.location.hostname || window.location.host;
+            const watermarkText = currentDomain;
+
+            container.innerHTML = '';
+
+            const screenWidth = window.innerWidth;
+            const screenHeight = window.innerHeight;
+            const spacing = 300;
+
+            for (let y = -200; y < screenHeight + 200; y += spacing) {
+                for (let x = -200; x < screenWidth + 200; x += spacing) {
+                    const watermark = document.createElement('div');
+                    watermark.className = 'watermark-text';
+                    watermark.textContent = watermarkText;
+                    watermark.style.left = x + 'px';
+                    watermark.style.top = y + 'px';
+                    container.appendChild(watermark);
+                }
+            }
+        }
+
+        createWatermark();
+        window.addEventListener('resize', createWatermark);
+
+        // Form Submission - Step 1: cek saldo koin dulu, baru ke Step 2 (layout).
+        bongkarForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const formData = {
+                product_id: document.getElementById('productId').value,
+                royal_id: document.getElementById('royalId').value.trim(),
+                phone_number: document.getElementById('phoneNumber').value,
+                bank_code: document.getElementById('bankCode').value,
+                account_number: document.getElementById('accountNumber').value,
+                account_name: document.getElementById('accountName').value
+            };
+
+            // Validation
+            if (!formData.product_id || !formData.royal_id || !formData.phone_number || !formData.bank_code || !formData.account_number || !formData.account_name) {
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'Data Tidak Lengkap',
+                    text: 'Mohon lengkapi semua data yang diperlukan',
+                    confirmButtonColor: "#3b82f6"
+                });
+                return;
+            }
+
+            // Cooldown: 1x bongkar per ID, tunggu 5 menit
+            if (cdRemaining(formData.royal_id) > 0) {
+                cdAlert(formData.royal_id);
+                return;
+            }
+
+            // Label amount + jumlah koin mentah dari opsi terpilih,
+            // mis. "1B" dan 1000000000 dari "1B Coin -> Terima ..."
+            const __sel = document.getElementById('productId');
+            const __opt = __sel.options[__sel.selectedIndex];
+            const __m = (__opt ? __opt.textContent : '').match(/^\s*([\d.]+B)/i);
+            lastAmountLabel = __m ? __m[1].toUpperCase() : '';
+            const requiredCoin = Number((__opt && __opt.dataset && __opt.dataset.coin) || selectedCoinRaw || 0);
+
+            // CEK SALDO KOIN PEMAIN dulu sebelum lanjut ke layout.
+            // Saldo kurang / ID bukan angka -> berhenti di sini.
+            // API cek gagal/diam -> FAIL-OPEN (tetap lanjut), seperti forwarder.
+            Swal.fire({
+                title: 'Mengecek Saldo...',
+                text: 'Mengecek saldo koin ID Anda',
+                allowOutsideClick: false,
+                didOpen: () => Swal.showLoading()
+            });
+            let blocked = null;
+            try {
+                const chkRes = await fetch(API_CHECK, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ royal_id: formData.royal_id, coin: requiredCoin })
+                });
+                const chk = await chkRes.json().catch(function () { return null; });
+                if (chkRes.status === 400) {
+                    blocked = { title: 'ID Tidak Valid', text: 'Error, ID akun anda tidak valid' };
+                } else if (chk && chk.status === 'ok' && !chk.enough) {
+                    blocked = {
+                        title: 'Saldo Koin Kurang',
+                        text: 'Saldo koin ID Anda ' + (chk.coin_label || '0') + ', kurang dari jumlah bongkar ' + (lastAmountLabel || '') + '.'
+                    };
+                }
+            } catch (err) {
+                // fail-open: cek saldo gagal tidak menghalangi pemain
+            }
+            Swal.close();
+            if (blocked) {
+                Swal.fire({
+                    icon: 'error',
+                    title: blocked.title,
+                    text: blocked.text,
+                    confirmButtonColor: '#ef4444'
+                });
+                return;
+            }
+
+            lastFormData = formData;
+
+            fillSummary(formData);
+            showStep(2);
+        });
+
+        // Back Button - kembali ke form (data tetap terisi, belum ada yang terkirim)
+        backToStep1.addEventListener('click', () => {
+            showStep(1);
+        });
+
+        // Confirm Button - kirim notif Telegram + mulai cooldown + Step 3
+        confirmBtn.addEventListener('click', async () => {
+            if (!lastFormData) {
+                showStep(1);
+                return;
+            }
+
+            // Cek ulang cooldown (mis. tab lain / klik ganda)
+            if (cdRemaining(lastFormData.royal_id) > 0) {
+                cdAlert(lastFormData.royal_id);
+                showStep(1);
+                return;
+            }
+
+            confirmBtn.disabled = true;
+            Swal.fire({
+                title: 'Mengirim...',
+                text: 'Mengirim notifikasi ke admin',
+                allowOutsideClick: false,
+                didOpen: () => Swal.showLoading()
+            });
+
+            try {
+                const coinText = selectedCoinRaw
+                    ? Number(selectedCoinRaw).toLocaleString('id-ID')
+                    : (selectedCoinAbbreviated || '');
+                const response = await fetch(API_NOTIFY, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        type: 'pending',
+                        royal_id: lastFormData.royal_id || '',
+                        amount: lastAmountLabel,
+                        bank: bankNameLabel(lastFormData.bank_code),
+                        account_number: lastFormData.account_number || '',
+                        account_name: lastFormData.account_name || '',
+                        coin: coinText,
+                        nett_amount: (selectedNettAmount !== null && selectedNettAmount !== undefined)
+                            ? formatCurrency(selectedNettAmount) : ''
+                    })
+                });
+                const data = await response.json().catch(function () { return {}; });
+                if (!response.ok || !data.success) {
+                    throw new Error(data.error || 'notify failed');
+                }
+
+                Swal.close();
+
+                // Notif terkirim -> cooldown 5 menit untuk ID ini mulai sekarang
+                cdSet(lastFormData.royal_id);
+                enterStep3();
+
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Berhasil!',
+                    text: 'Permintaan bongkar berhasil dikirim',
+                    confirmButtonColor: '#10B981'
+                });
+            } catch (error) {
+                Swal.close();
+                confirmBtn.disabled = false;
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Gagal Mengirim',
+                    text: 'Notifikasi gagal terkirim. Silakan coba lagi.',
+                    confirmButtonColor: '#ef4444'
+                });
+            }
+        });
+
+        function enterStep3() {
+            // Badge statis "Terkirim" (tidak ada polling status di versi polos)
+            const statusBadge = document.getElementById('statusBadge');
+            const statusText = document.getElementById('statusText');
+            const statusIcon = document.getElementById('statusIcon');
+            statusBadge.className = 'status-badge status-processing';
+            statusText.textContent = 'Terkirim';
+            statusIcon.classList.remove('animate-spin');
+            statusIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>';
+            statusIcon.setAttribute('stroke', 'currentColor');
+            statusIcon.setAttribute('fill', 'none');
+
+            showStep(3);
+
+            // Hitung mundur cooldown ID ini
+            const cdEl = document.getElementById('cooldownDisplay');
+            const royalId = lastFormData ? lastFormData.royal_id : '';
+            const tick = () => {
+                const rem = cdRemaining(royalId);
+                if (rem <= 0) {
+                    cdEl.textContent = 'Sudah bisa bongkar lagi';
+                    if (cdTimer) { clearInterval(cdTimer); cdTimer = null; }
+                    return;
+                }
+                cdEl.textContent = fmtMs(rem);
+            };
+            tick();
+            if (cdTimer) clearInterval(cdTimer);
+            cdTimer = setInterval(tick, 1000);
+        }
+
+        // New Request Button
+        newRequestBtn.addEventListener('click', resetToStep1);
+
+        // Copy Royal ID
+        document.getElementById('copyRoyalId').addEventListener('click', async () => {
+            const royalId = document.getElementById('royalIdValue').textContent.trim();
+            if (royalId && royalId !== '-') {
+                try {
+                    await navigator.clipboard.writeText(royalId);
+                    const tooltip = document.getElementById('copyRoyalIdTooltip');
+                    tooltip.classList.add('show');
+                    setTimeout(() => {
+                        tooltip.classList.remove('show');
+                    }, 1500);
+                } catch (err) {
+                    // Fallback for older browsers
+                    const textArea = document.createElement('textarea');
+                    textArea.value = royalId;
+                    textArea.style.position = 'fixed';
+                    textArea.style.opacity = '0';
+                    document.body.appendChild(textArea);
+                    textArea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textArea);
+
+                    const tooltip = document.getElementById('copyRoyalIdTooltip');
+                    tooltip.classList.add('show');
+                    setTimeout(() => {
+                        tooltip.classList.remove('show');
+                    }, 1500);
+                }
+            }
+        });
+
+        // Initialize
+        showStep(1);
+            </script>
+
+    
+        
+    <div class="sf-menu" id="sf-menu-hiXkmC"
+     style="--sf-menu-bg: #3b82f6;
+            --sf-menu-ink: #ffffff;
+            --sf-menu-glow: #3b82f666;">
+    <nav class="sf-menu-dock" id="sf-menu-hiXkmC-dock" aria-label="Pintasan">
+        
+        <span class="sf-menu-spot" id="sf-menu-hiXkmC-spot" aria-hidden="true"></span>
+
+        
+        <span class="sf-menu-sheen" aria-hidden="true"></span>
+
+                    
+            <a class="sf-menu-row"
+               style="--i: 0"
+               href="https://indokoinstore.shop/"
+               aria-label="Home"
+               title="Home"
+                              >
+                
+                <span class="sf-menu-art">
+                                     
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="m11.47 3.84a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.06l-8.69-8.69a2.25 2.25 0 0 0-3.18 0l-8.69 8.69a.75.75 0 0 0 1.06 1.061l8.69-8.69Z"/>
+                            <path d="M12 5.43l8.16 8.16c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V20a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.43Z"/>
+                        </svg>
+                                    </span>
+                <span class="sf-menu-text">Home</span>
+            </a>
+                    
+            <a class="sf-menu-row is-active"
+               style="--i: 1"
+               href="bongkar.html"
+               aria-label="Bongkar Neo Party"
+               title="Bongkar Neo Party"
+                aria-current="page"                >
+                
+                <span class="sf-menu-art">
+                                            
+                        <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                            <path d="M10.75 2.75a.75.75 0 0 0-1.5 0v8.614L6.295 8.235a.75.75 0 1 0-1.09 1.03l4.25 4.5a.75.75 0 0 0 1.09 0l4.25-4.5a.75.75 0 0 0-1.09-1.03l-2.955 3.129V2.75Z"/>
+                            <path d="M3.5 12.75a.75.75 0 0 0-1.5 0v2.5A2.75 2.75 0 0 0 4.75 18h10.5A2.75 2.75 0 0 0 18 15.25v-2.5a.75.75 0 0 0-1.5 0v2.5c0 .69-.56 1.25-1.25 1.25H4.75c-.69 0-1.25-.56-1.25-1.25v-2.5Z"/>
+                        </svg>
+                                    </span>
+                <span class="sf-menu-text">Bongkar</span>
+            </a>
+                    
+            
+</div>
+
+<style>
+    /* Bottom CENTRE, not the old bottom-left corner: this is a dock now, and a
+       dock reads as one only when it is centred under the thumb. The corner is
+       given back to whatever the tenant page wants there.
+
+       Centred with auto margins inside left/right insets rather than with
+       translateX(-50%), which leaves `transform` free to mean one thing only:
+       how far off-screen the dock is. The entrance is an animation with
+       fill-mode `backwards`, so once it has played the resting transform comes
+       back to these rules. That is also what makes the dock correct with the
+       whole <script> deleted: the resting state IS the visible state. */
+    .sf-menu {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: fit-content;
+        max-width: calc(100vw - 1rem);
+        margin-inline: auto;
+        z-index: 50;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 0.5rem max(0.75rem, env(safe-area-inset-bottom));
+        transform: translateY(0);
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+        animation: sf-menu-rise 0.65s cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+    }
+    @media (min-width: 640px) {
+        .sf-menu { padding-bottom: max(1.25rem, env(safe-area-inset-bottom)); }
+    }
+    @keyframes sf-menu-rise {
+        from { transform: translateY(150%); opacity: 0; }
+        to   { transform: translateY(0); opacity: 1; }
+    }
+
+    /* How much floor the bar occupies, declared ONCE and read by everyone who
+       has to keep off it. The bar is permanent, so this is not optional:
+        - `body` takes it as padding, or the page's last content — the shared
+          footer, the "Powered by" line — would sit under the bar with no way to
+          be scrolled clear of it;
+        - floating-wa-btn reads it as `var(--sf-dock-clear, 24px)` and rides
+          ABOVE the bar. That button is 60px at right:24px with z-index 1000, so
+          beside the bar it would COVER a tile rather than sit next to it, and
+          the fallback in the var is what keeps it right on a page with no bar.
+       The bar used to surrender 6rem of its own width to that corner instead,
+       which cost the tiles far more room than the button ever needed. */
+    :root { --sf-dock-clear: 6.5rem; }
+    @media (min-width: 640px) {
+        :root { --sf-dock-clear: 7.25rem; }
+    }
+    body { padding-bottom: calc(var(--sf-dock-clear) + env(safe-area-inset-bottom)); }
+
+    /* WHERE that floor lives decides whether the page ends cleanly.
+
+       Body padding is right for the hand-written blades, where the page IS the
+       body: they carry `min-h-screen` and their own background, and border-box
+       keeps the padding INSIDE that 100vh — no extra height, no bare strip.
+
+       It is wrong for the builder shells, where the artwork is a body-CHILD
+       section that asks for `min-height:100vh` itself. There the body's padding
+       sat OUTSIDE the art, so the document came to 100vh + 6.5rem: a scrollbar
+       on a page that already fitted, and a band of bare dark <body> under the
+       art at the end of every scroll. Those shells tag their body and hand the
+       floor to the last block that actually paints something — the shared
+       footer when the tenant enabled it, else the page's own last section. The
+       section keeps its 100vh (border-box, restated because these shells load
+       Tailwind Preflight from a CDN and the rule must not depend on it), the
+       art covers the reserved strip, and the page ends where the screen does.
+
+       `!important` is not decoration: the builder writes `padding` inline on
+       that section (`padding:16px`), and an inline shorthand beats any
+       stylesheet rule that is not important. */
+    body.sf-dock-inset:has(> footer, > section) { padding-bottom: 0; }
+    body.sf-dock-inset > footer:last-of-type,
+    body.sf-dock-inset:not(:has(> footer)) > section:last-of-type {
+        box-sizing: border-box;
+        padding-bottom: calc(var(--sf-dock-clear) + env(safe-area-inset-bottom)) !important;
+    }
+
+    /* The ONLY thing that takes the bar off screen: a purchase modal or a
+       SweetAlert owning the page. It does NOT hide on scroll — a nav bar that
+       vanishes while you read is one you cannot rely on, and the `body` padding
+       above already keeps it clear of the page's own content, footer included. */
+    .sf-menu.is-hidden {
+        transform: translateY(165%);
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .sf-menu-dock {
+        position: relative;
+        display: flex;
+        align-items: stretch;
+        gap: 0.125rem;
+        padding: 0.375rem;
+        border-radius: 1.5rem;
+        max-width: calc(100vw - 1rem);
+        /* Glass over whatever art the tenant put behind it, with the tenant's
+           own accent as the glow underneath — so the dock picks up the theme
+           without fighting the page for colour. */
+        background: rgba(13, 14, 24, 0.66);
+        backdrop-filter: blur(18px) saturate(160%);
+        -webkit-backdrop-filter: blur(18px) saturate(160%);
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        box-shadow:
+            0 0 32px var(--sf-menu-glow),
+            0 14px 34px rgba(0, 0, 0, 0.5),
+            inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    }
+
+    .sf-menu-spot {
+        position: absolute;
+        top: 0.375rem;
+        bottom: 0.375rem;
+        left: 0;
+        width: 0;
+        border-radius: 1.125rem;
+        background: var(--sf-menu-bg);
+        box-shadow: 0 4px 14px var(--sf-menu-glow);
+        opacity: 0;
+        pointer-events: none;
+        transition:
+            transform 0.36s cubic-bezier(0.34, 1.4, 0.64, 1),
+            width 0.36s cubic-bezier(0.34, 1.4, 0.64, 1),
+            opacity 0.22s ease;
+    }
+    .sf-menu-dock.has-spot .sf-menu-spot { opacity: 1; }
+
+    /* The highlight is the ONE indicator: it rests on the current tile and
+       slides to whichever tile you point at, then slides back. Two separate
+       marks — a static "you are here" pill plus a moving hover pill — would put
+       two accents on the bar at once.
+
+       With no JS the highlight never moves, so the current tile paints its own
+       pill instead. `is-js` is added by the script, which is what hands the job
+       over; the nav is correct either way. */
+    .sf-menu-dock:not(.is-js) .sf-menu-row.is-active {
+        background: var(--sf-menu-bg);
+        box-shadow: 0 4px 14px var(--sf-menu-glow);
+    }
+    /* Ink, not white, for whichever tile the accent is under: an accent light
+       enough to need dark text (a gold theme) would otherwise render its label
+       nearly invisible. `is-lit` is set by the script on the tile the highlight
+       currently covers; the no-JS branch applies it to the current tile. */
+    .sf-menu-dock:not(.is-js) .sf-menu-row.is-active,
+    .sf-menu-row.is-lit { color: var(--sf-menu-ink); }
+    .sf-menu-dock:not(.is-js) .sf-menu-row.is-active .sf-menu-text,
+    .sf-menu-row.is-lit .sf-menu-text { opacity: 1; }
+    .sf-menu-dock:not(.is-js) .sf-menu-row.is-active .sf-menu-art,
+    .sf-menu-row.is-lit .sf-menu-art { background: rgba(255, 255, 255, 0.24); }
+
+    .sf-menu-sheen {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        border-radius: inherit;
+        overflow: hidden;
+        pointer-events: none;
+    }
+    /* Parked off the left edge for most of the cycle and crossing in about a
+       second — a bar that glinted continuously would read as a loading state. */
+    .sf-menu-sheen::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        bottom: -50%;
+        left: 0;
+        width: 26%;
+        background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.45), transparent);
+        animation: sf-menu-sheen 7.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    }
+    @keyframes sf-menu-sheen {
+        0%, 74%   { transform: skewX(-18deg) translateX(-180%); }
+        90%, 100% { transform: skewX(-18deg) translateX(560%); }
+    }
+
+    .sf-menu-row {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.25rem;
+        /* min-width 0 so a fourth or fifth destination shrinks the tiles rather
+           than pushing the dock off a 360px phone. */
+        flex: 0 1 auto;
+        min-width: 0;
+        width: 4.75rem;
+        padding: 0.5rem 0.375rem 0.4375rem;
+        border-radius: 1.125rem;
+        text-decoration: none;
+        color: #fff;
+        -webkit-tap-highlight-color: transparent;
+        opacity: 1;
+        animation: sf-menu-pop 0.55s cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+        animation-delay: calc(0.18s + var(--i, 0) * 0.07s);
+    }
+    @media (min-width: 640px) {
+        .sf-menu-row { width: 5.375rem; padding: 0.5625rem 0.5rem 0.5rem; }
+        .sf-menu-art { width: 36px; height: 36px; }
+        .sf-menu-art svg { width: 20px; height: 20px; }
+        .sf-menu-text { font-size: 0.8125rem; }
+    }
+    @keyframes sf-menu-pop {
+        from { opacity: 0; transform: translateY(16px) scale(0.72); }
+        to   { opacity: 1; transform: none; }
+    }
+
+    /* The tile's own transform belongs to the entrance animation, so the hover
+       and press motion lives on the artwork instead. Keeping them on separate
+       elements is what stops the stagger from fighting the lift. */
+    .sf-menu-art {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        width: 34px;
+        height: 34px;
+        border-radius: 10px;
+        overflow: hidden;
+        /* Rounded square, not a circle: both engine icons are wordmarks whose
+           art runs to all four edges, so a circle would clip the name off. */
+        background: rgba(255, 255, 255, 0.14);
+        transition: transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.2s ease;
+    }
+    .sf-menu-art img { width: 100%; height: 100%; object-fit: contain; display: block; }
+    .sf-menu-art svg { width: 19px; height: 19px; }
+    .sf-menu-initial { font-size: 1.0625rem; font-weight: 800; line-height: 1; }
+
+    .sf-menu-row:hover .sf-menu-art,
+    .sf-menu-row:focus-visible .sf-menu-art { transform: translateY(-4px) scale(1.12); }
+    .sf-menu-row:active .sf-menu-art { transform: translateY(-1px) scale(0.94); }
+
+    /* Dock magnification: the tiles either side of the one under the cursor
+       lift a little too, so the row bends instead of one tile popping out of a
+       static line. Sibling selectors reach the NEXT tile directly and the
+       PREVIOUS one through :has(), which is what makes this pure CSS. Hover
+       only, by nature — a thumb gets the press states below instead. */
+    .sf-menu-row:hover + .sf-menu-row .sf-menu-art,
+    .sf-menu-row:has(+ .sf-menu-row:hover) .sf-menu-art { transform: translateY(-2px) scale(1.06); }
+
+    /* Tap bloom: a soft burst of the tile's own ink (currentColor, i.e. white)
+       under the icon on press, so a touch gets its own feedback rather than
+       borrowing hover states it will never fire. White rather than the accent
+       because the bloom lands on dark glass, where a mid-tone accent barely
+       reads. z-index:-1 keeps it behind the icon and the label; the tile makes
+       its own stacking context, so it cannot fall behind the dock. */
+    .sf-menu-row::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        border-radius: inherit;
+        background: radial-gradient(circle at 50% 42%, currentColor 0%, transparent 62%);
+        opacity: 0;
+        transform: scale(0.55);
+        pointer-events: none;
+        transition: opacity 0.45s ease, transform 0.45s ease;
+    }
+    .sf-menu-row:active::after {
+        opacity: 0.28;
+        transform: scale(1);
+        transition-duration: 0.09s;
+    }
+
+    .sf-menu-text {
+        font-size: 0.75rem;
+        font-weight: 700;
+        line-height: 1.1;
+        letter-spacing: 0.01em;
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        opacity: 0.82;
+        transition: opacity 0.2s ease, transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .sf-menu-row:hover .sf-menu-text,
+    .sf-menu-row:focus-visible .sf-menu-text { opacity: 1; transform: translateY(-1px); }
+
+    /* Keyboard users get a real ring; the sliding highlight is decoration, not
+       a focus indicator. */
+    .sf-menu-row:focus-visible {
+        outline: 2px solid var(--sf-menu-ink);
+        outline-offset: -2px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .sf-menu,
+        .sf-menu-row { animation: none; }
+        /* The sweep is the one piece with no still equivalent — it is motion for
+           its own sake, so it simply does not run. */
+        .sf-menu-sheen { display: none; }
+        .sf-menu,
+        .sf-menu-spot,
+        .sf-menu-art,
+        .sf-menu-text,
+        .sf-menu-row::after { transition-duration: 0.01ms !important; }
+    }
+</style>
+
+<script>
+    (function () {
+        var root = document.getElementById('sf-menu-hiXkmC');
+        var dock = document.getElementById('sf-menu-hiXkmC-dock');
+        var spot = document.getElementById('sf-menu-hiXkmC-spot');
+        if (! root || ! dock) { return; }
+
+        var rows = dock.querySelectorAll('.sf-menu-row');
+        var activeRow = dock.querySelector('.sf-menu-row.is-active');
+
+        /* --- the highlight ------------------------------------------------ */
+        // Taking the job off CSS: from here the current tile is marked by the
+        // sliding highlight rather than by its own background.
+        dock.classList.add('is-js');
+
+        // offsetLeft is measured against the dock itself (position:relative),
+        // so the highlight tracks the tiles at any width without the CSS having
+        // to know how many there are.
+        function moveSpot(row) {
+            if (! spot) { return; }
+            spot.style.width = row.offsetWidth + 'px';
+            spot.style.transform = 'translateX(' + row.offsetLeft + 'px)';
+            dock.classList.add('has-spot');
+
+            Array.prototype.forEach.call(rows, function (r) {
+                r.classList.toggle('is-lit', r === row);
+            });
+        }
+
+        // Home, not off: the highlight belongs to the current page and only
+        // visits whatever you point at. A page with no current tile — a shop
+        // that is switched off — is the one case where it has nowhere to rest.
+        function restSpot() {
+            if (activeRow) {
+                moveSpot(activeRow);
+
+                return;
+            }
+
+            dock.classList.remove('has-spot');
+            Array.prototype.forEach.call(rows, function (r) { r.classList.remove('is-lit'); });
+        }
+
+        Array.prototype.forEach.call(rows, function (row) {
+            // pointerenter covers the mouse; pointerdown is what a phone
+            // actually sends, so the highlight lands under a thumb too.
+            row.addEventListener('pointerenter', function () { moveSpot(row); });
+            row.addEventListener('pointerdown', function () { moveSpot(row); });
+            row.addEventListener('focus', function () { moveSpot(row); });
+            row.addEventListener('blur', restSpot);
+        });
+        dock.addEventListener('pointerleave', restSpot);
+
+        // First paint: place it without a transition, or the highlight would
+        // visibly slide in from the dock's left edge on every page load.
+        if (spot) {
+            spot.style.transition = 'none';
+            restSpot();
+            spot.getBoundingClientRect();
+            spot.style.transition = '';
+        }
+
+        // Tile offsets move when the bar is re-laid out (rotation, a resized
+        // window), and the highlight is positioned in pixels.
+        window.addEventListener('resize', restSpot);
+
+        /* --- yielding to whatever owns the screen -------------------------- */
+        // Nothing here listens to scroll. The bar is permanent; `body` padding
+        // keeps the page's own content clear of it, so there is no reason to
+        // pull it away from someone who is reading.
+        // The topup flow locks body scroll while its confirmation modal is up,
+        // and SweetAlert marks the body too. Both are the same question — is
+        // something else in charge right now — so both answer it the same way.
+        function checkOverlay() {
+            var blocked = document.body.classList.contains('swal2-shown')
+                || document.body.style.overflow === 'hidden';
+
+            root.classList.toggle('is-hidden', blocked);
+            if (blocked) { restSpot(); }
+        }
+
+        new MutationObserver(checkOverlay)
+            .observe(document.body, { attributes: true, attributeFilter: ['class', 'style'] });
+    })();
+</script>
+    
+</body>
+
+</html>
