@@ -10,7 +10,7 @@
  *   TELEGRAM_CHAT_ID   - chat ID tujuan notif
  */
 
-const ALLOWED_ORIGINS = ['https://neoparty.web.id', 'https://indokar.vercel.app'];
+const ALLOWED_ORIGINS = ['https://neoparty.web.id', 'https://indokar.vercel.app', 'https://cuan.neomerlin.store'];
 
 function cors(req, res) {
   const origin = req.headers.origin || '';
@@ -42,7 +42,7 @@ module.exports = async (req, res) => {
   const emoji = type === 'success' ? '✅' : '⏳';
   const status = type === 'success' ? 'SUKSES' : 'PENDING';
 
-  let text = `${emoji} *BONGKAR INDOKOIN ${status}*\n\n`;
+  let text = `${emoji} *BONGKAR MAS MERLIN ${status}*\n\n`;
   text += `🆔 ID: ${body.royal_id || '-'}\n`;
   text += `💰 Jumlah: ${body.amount || '-'}\n`;
   if (body.coin) text += `🪙 Koin: ${body.coin}\n`;
